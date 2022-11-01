@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block body %}
+    {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} alert-dismissible fad show" role="alert">
+            <strong>Message:</strong> {{ message }}
+            <button type="button" class="close" data-dismiss="'alert" aria-label="close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
+    {% endfor %}
+
+    <h2>Welcome to my app !</h2>
+    {% if user.is_authenticated %}
+        <h3>Hello {{ fname }}</h3>
+        <h4>You are logged in</h4>
+        <button type="submit"><a href="logout">LogOut</a></button>
+    {% endif %}
+{% endblock %}
