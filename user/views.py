@@ -22,13 +22,6 @@ def signup(request):
         pass1 = request.POST.get('pass1')
         pass2 = request.POST.get('pass2')
 
-        # username = request.POST['username']
-        # fname = request.POST['fname']
-        # lname = request.POST['lname']
-        # email = request.POST['email']
-        # pass1 = request.POST['pass1']
-        # pass2 = request.POST['pass2']
-
         if User.objects.filter(username=username):
             messages.error(request, 'Username already exist !')
             return redirect('home')
