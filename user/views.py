@@ -54,11 +54,11 @@ def signup(request):
         messages.success(request, 'You are registered')
 
         # welcome message
-        subject = 'Welcome to my web app - Django Login !'
-        message = "Hello" + myuser.first_name + "! \n" + "Thanks for your register ! \n\n" + "Mobin Zamanzadeh"
-        from_email = settings.EMAIL_HOST_USER
-        to_list = [myuser.email]
-        send_mail(subject, message, from_email, to_list, fail_silently=False)
+        # subject = 'Welcome to my web app - Django Login !'
+        # message = "Hello" + myuser.first_name + "! \n" + "Thanks for your register ! \n\n" + "Mobin Zamanzadeh"
+        # from_email = settings.EMAIL_HOST_USER
+        # to_list = [myuser.email]
+        # send_mail(subject, message, from_email, to_list, fail_silently=False)
 
         return redirect('login')
 
